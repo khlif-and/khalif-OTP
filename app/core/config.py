@@ -6,6 +6,9 @@ class Settings(BaseSettings):
     otp_expiry_seconds: int
     debug_mode: bool
     wa_gateway_url: str
+    sms_gateway_url: str = ""
+    sms_gateway_api_key: str = ""
+    telegram_bot_token: str = ""
 
     class Config:
         env_file = ".env"
