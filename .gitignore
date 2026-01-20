@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node.js (WhatsApp Gateway)
+wa-gateway/node_modules/
+wa-gateway/.wwebjs_auth/
+wa-gateway/.wwebjs_cache/
+
+# Logs
+*.log
+
+# Temporary Files
+request.json
+requirements.txt
