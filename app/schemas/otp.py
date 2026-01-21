@@ -6,6 +6,9 @@ class OTPRequest(BaseModel):
 class OTPTelegramRequest(BaseModel):
     chat_id: str
 
+class OTPEmailRequest(BaseModel):
+    email: str
+
 class OTPVerifyRequest(BaseModel):
-    phone_number: str
+    identifier: str
     otp_code: str

@@ -1,16 +1,18 @@
 from fastapi import FastAPI
 from app.core.config import settings
+from app.core.config import settings
 from app.api.router import router
+from app.api.html_demo import html_router
 
 app = FastAPI(title=settings.app_name)
 
-@app.on_event("startup")
-async def startup_event():
-    from app.services.telegram_service import TelegramService
-    import asyncio
-    asyncio.create_task(TelegramService.start_polling())
+
+
+
 
 app.include_router(router)
+app.include_router(html_router)
+
 
 @app.get("/")
 async def root():
