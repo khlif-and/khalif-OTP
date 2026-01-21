@@ -9,6 +9,13 @@ class Settings(BaseSettings):
     sms_gateway_url: str = ""
     sms_gateway_api_key: str = ""
     telegram_bot_token: str = ""
+    
+    # SMTP Settings
+    smtp_host: str = ""
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
+    smtp_from_email: str = ""
 
     class Config:
         env_file = ".env"
